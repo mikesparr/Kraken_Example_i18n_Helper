@@ -4,6 +4,9 @@
 var kraken = require('kraken-js'),
     app = {};
 
+// Load our custom helpers
+require('./lib/helper-bundleString');
+
 
 app.configure = function configure(nconf, next) {
     // Async method run on startup.

@@ -36,5 +36,17 @@ describe('/', function () {
                 done(err);
             });
     });
+    
+    // sorry I'm being lazy but enjoy the helper and fork
+    it('should say "The quick brown fox..."', function (done) {
+        request(mock)
+            .get('')
+            .expect(200)
+            .expect('Content-Type', /html/)
+            .expect(/The quick brown fox /)
+            .end(function(err, res){
+                done(err);
+            });
+    });
 
 });
